@@ -1,1 +1,83 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>plane guesser</title>
+
+	<link rel="stylesheet" href="testcss.css">
+</head>
+
+
+<script>
+  function myFunction() 
+  {
+    var randomNumber = "123";
+    document.getElementById("randomNumber").innerHTML = randomNumber;
+  }
+</script>
+
+<body>
+
+<p> <a href="#rules">rules </a></p>
+<p> <a href="#list">aircraft </a></p>
+
+  <h1>Plane....le</h1>
+
+  <p>Guess the aircraft</p>
+
+  <script src="/Users/joshuacash/Desktop/newSiteAttempt/testJavascript.js"></script>
+
+
+  <img alt="" src="/Users/joshuacash/Desktop/newSiteAttempt/pictures/night_bomber.png" 
+        style="height: 170px; width: 400px" id="imgClickAndChange" onclick="changeImage()"/>
+
+  <form action="/Users/joshuacash/Desktop/newSiteAttempt/testHtml.html">
+    <input type="text" autocomplete="off" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="aircraft"> 
+  </form>
+  
+  <label for="fname">Guess:</label>
+  
+  <input type="text" id="fname" name="fname"><br><br>
+  
+  <input type="submit" value="Submit">
+  
+  <input type="submit" value="Next">
+
+   <div id="container">
+        <div id="box">
+            <div class="input"><label for="min">min</label><input type="number" id='min'></div>
+            <div class="input"><label for="max">max</label><input type="number" id="max"></div>
+            <div id="btn"><input type="button" value="generate"></div>
+            <div id="output">= 0</div>
+        </div>
+    </div>
+
+
+
+<h2 id="rules">Rules</h2>
+<p>these are the rules for how this works; type in your guess, hit guess. if you don't want to guess this one, you can click "next" to move on to the next one. </p>
+<h2 id="list">List of aircraft</h2>
+ <ul id="aircraft" role="listbox" aria-label="Planes">
+    <li id="night_bomber" role="option">Night Bomber</li>
+    <li id="Speed_Canard" role="option">Speed Canard</li>
+    <li id="night_bomber_1" role="option">Night Bomber</li>
+    <li id="Speed_Canard_1" role="option">Speed Canard</li>
+    <li id="night_bomber_2" role="option">Night Bomber</li>
+    <li id="Speed_Canard_2" role="option">Speed Canard</li>
+    <li id="night_bomber_3" role="option">Night Bomber</li>
+    <li id="Speed_Canard_3" role="option">Speed Canard</li>
+    <li id="night_bomber_4" role="option">Night Bomber</li>
+    <li id="Speed_Canard_4" role="option">Speed Canard</li>
+    <li id="night_bomber_5" role="option">Night Bomber</li>
+    <li id="Speed_Canard_5" role="option">Speed Canard</li>
+    <li id="night_bomber_6" role="option">Night Bomber</li>
+    <li id="Speed_Canard_6" role="option">Speed Canard</li>
+</ul>
+
+</body>
+
+</html>
