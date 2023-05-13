@@ -1,26 +1,100 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap');
 
+html 
+{
+  scroll-behavior: smooth;
+}
+
 body 
 {
-    font-family: 'Baloo Bhai 2', cursive;
-    background: #c4c4c4;
-    font-size: 100%;
-   background-image: url("https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/background.png");
+  font-family: 'Baloo Bhai 2', cursive;
+  background: #c4c4c4;
+  font-size: 100%;
+  background-image: url("https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/background.png");
 }
+
 h1 
 {
   font-size: 300%;
   color: whitesmoke;
 }
+
 p 
 {
   color: white;
 }
+
 a
 {
   color: white;
 }
+
+.navbar 
+{
+  overflow: hidden;
+  background-color:#333;
+  postion:fixed;
+  top:0;
+  width:100%;
+}
+
+.navbar a
+{
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+  font-size:17px;
+}
+
+.navbar a:hover 
+{
+  background: #ddd;
+  color:black;
+}
+
+.scrollSection
+{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.mainGame
+{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: seagreen;
+  scroll-snap-align: start;
+}
+
+.rules-container
+{
+  justify-content: center;
+  height: 100vh;
+  line-height: 100vh;
+  background-color: darkred;
+  scroll-snap-align: start;
+}
+
+span
+{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 10vh;
+}
+
+.list-container
+{  
+  height: 100vh;
+  background-color: blue;
+  scroll-snap-align: start;
+}
+
 form 
 {
   color: white;
@@ -36,7 +110,7 @@ img
 
 * 
 {
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 10px;
   padding: 10px;
   padding-top: 0px;
@@ -44,8 +118,4 @@ img
   text-align: center;
   text-transform: uppercase
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }

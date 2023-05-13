@@ -17,100 +17,108 @@
 </style>
 
 <body>
-
-<script src="/Users/joshuacash/Desktop/newSiteAttempt/testJavascript.js"></script>
-
-<p> <a href="#rules">rules </a>
-    <a href="#list">aircraft </a></p>
-
-  <h1>Plane....le</h1>
-
-
-<div class="content display-container">
-
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
-  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
-
-  <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
-
+<div class="navbar">
+    <a href="#game">game </a>
+    <a href="#rules">rules </a>
+    <a href="#list">aircraft </a>
 </div>
 
-<script>
+  <div class=scrollSection>
+    <section class="mainGame">
 
-  var slideIndex = 1; 
-  showDivs (slideIndex);
+    <h1 id="game">Plane....le</h1>
 
-  function plusDivs(n)
-  {
-    showDivs(slideIndex += n);
-  }
 
-  function showDivs(n)
+  <div class="content display-container">
+
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
+    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
+
+    <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
+
+  </div>
+
+  <script>
+
+    var slideIndex = 1; 
+    showDivs (slideIndex);
+
+    function plusDivs(n)
     {
-      var i; 
-      var x = document.getElementsByClassName("aircraftImgs");
-
-      if ( n > x.length ) 
-        {
-          slideIndex = 1
-        }
-
-      if ( n < 1 ) 
-        {
-          slideIndex = x.length 
-        }
-
-      for(i=0; i<x.length; i++)
-        {
-          x[i].style.display = "none";
-        }
-
-      x[slideIndex-1].style.display = "block";
+      showDivs(slideIndex += n);
     }
-</script>
+
+    function showDivs(n)
+      {
+        var i; 
+        var x = document.getElementsByClassName("aircraftImgs");
+
+        if ( n > x.length ) 
+          {
+            slideIndex = 1
+          }
+
+        if ( n < 1 ) 
+          {
+            slideIndex = x.length 
+          }
+
+        for(i=0; i<x.length; i++)
+          {
+            x[i].style.display = "none";
+          }
+
+        x[slideIndex-1].style.display = "block";
+      }
+  </script>
 
 
-  <p> <label for="fname">Guess:</label> </p>
-  
-  <form action="/Users/joshuacash/Desktop/newSiteAttempt/testHtml.html">
-    <input type="text" autocomplete="off" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="aircraft"> 
-  </form>
-  
-  <input type="submit" value="Submit">
-  
-  <input type="submit" value="Next">
+    <p> <label for="fname">Guess:</label> </p>
+    
+    <form action="/Users/joshuacash/Desktop/newSiteAttempt/testHtml.html">
+      <input type="text" autocomplete="off" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="aircraft"> 
+    </form>
+    
+    <input type="submit" value="Submit">
+    
+    <input type="submit" value="Next">
 
+  </section>
+    <section class="rules-container"><span>
 
+      <h2 id="rules">Rules</h2>
+      <p>these are the rules for how this works; type in your guess, hit guess. if you don't want to guess this one, you can click "next" to move on to the next one. </p>
+    </span></section>
 
-<h2 id="rules">Rules</h2>
-<p>these are the rules for how this works; type in your guess, hit guess. if you don't want to guess this one, you can click "next" to move on to the next one. </p>
-<h2 id="list">List of aircraft</h2>
- <ul id="aircraft" role="listbox" aria-label="Planes">
-    <li id="night_bomber" role="option">Night Bomber</li>
-    <li id="Speed_Canard" role="option">Speed Canard</li>
-    <li id="night_bomber_1" role="option">Night Bomber</li>
-    <li id="Speed_Canard_1" role="option">Speed Canard</li>
-    <li id="night_bomber_2" role="option">Night Bomber</li>
-    <li id="Speed_Canard_2" role="option">Speed Canard</li>
-    <li id="night_bomber_3" role="option">Night Bomber</li>
-    <li id="Speed_Canard_3" role="option">Speed Canard</li>
-    <li id="night_bomber_4" role="option">Night Bomber</li>
-    <li id="Speed_Canard_4" role="option">Speed Canard</li>
-    <li id="night_bomber_5" role="option">Night Bomber</li>
-    <li id="Speed_Canard_5" role="option">Speed Canard</li>
-    <li id="night_bomber_6" role="option">Night Bomber</li>
-    <li id="Speed_Canard_6" role="option">Speed Canard</li>
-</ul>
-
+    <section class="list-container">
+      <h2 id="list">List of aircraft</h2>
+       <ul id="aircraft" role="listbox" aria-label="Planes">
+          <li id="night_bomber" role="option">Night Bomber</li>
+          <li id="Speed_Canard" role="option">Speed Canard</li>
+          <li id="night_bomber_1" role="option">Night Bomber</li>
+          <li id="Speed_Canard_1" role="option">Speed Canard</li>
+          <li id="night_bomber_2" role="option">Night Bomber</li>
+          <li id="Speed_Canard_2" role="option">Speed Canard</li>
+          <li id="night_bomber_3" role="option">Night Bomber</li>
+          <li id="Speed_Canard_3" role="option">Speed Canard</li>
+          <li id="night_bomber_4" role="option">Night Bomber</li>
+          <li id="Speed_Canard_4" role="option">Speed Canard</li>
+          <li id="night_bomber_5" role="option">Night Bomber</li>
+          <li id="Speed_Canard_5" role="option">Speed Canard</li>
+          <li id="night_bomber_6" role="option">Night Bomber</li>
+          <li id="Speed_Canard_6" role="option">Speed Canard</li>
+      </ul>
+    </section>
+  </div>
 </body>
 
 </html>
