@@ -12,49 +12,82 @@
 </head>
 
 
-<script>
-  function myFunction() 
-  {
-    var randomNumber = "123";
-    document.getElementById("randomNumber").innerHTML = randomNumber;
-  }
-</script>
+<style>
+  .aircraftImgs {display:none;}
+</style>
 
 <body>
 
-<p> <a href="#rules">rules </a></p>
-<p> <a href="#list">aircraft </a></p>
+<script src="/Users/joshuacash/Desktop/newSiteAttempt/testJavascript.js"></script>
+
+<p> <a href="#rules">rules </a>
+    <a href="#list">aircraft </a></p>
 
   <h1>Plane....le</h1>
 
-  <p>Guess the aircraft</p>
 
-  <script src="/Users/joshuacash/Desktop/newSiteAttempt/testJavascript.js"></script>
+<div class="content display-container">
+
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
+  <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
+
+  <button class="button black display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+
+  var slideIndex = 1; 
+  showDivs (slideIndex);
+
+  function plusDivs(n)
+  {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n)
+    {
+      var i; 
+      var x = document.getElementsByClassName("aircraftImgs");
+
+      if ( n > x.length ) 
+        {
+          slideIndex = 1
+        }
+
+      if ( n < 1 ) 
+        {
+          slideIndex = x.length 
+        }
+
+      for(i=0; i<x.length; i++)
+        {
+          x[i].style.display = "none";
+        }
+
+      x[slideIndex-1].style.display = "block";
+    }
+</script>
 
 
-  <img alt="" src="/Users/joshuacash/Desktop/newSiteAttempt/pictures/night_bomber.png" 
-        style="height: 170px; width: 400px" id="imgClickAndChange" onclick="changeImage()"/>
-
+  <p> <label for="fname">Guess:</label> </p>
+  
   <form action="/Users/joshuacash/Desktop/newSiteAttempt/testHtml.html">
     <input type="text" autocomplete="off" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="aircraft"> 
   </form>
   
-  <label for="fname">Guess:</label>
-  
-  <input type="text" id="fname" name="fname"><br><br>
-  
   <input type="submit" value="Submit">
   
   <input type="submit" value="Next">
-
-   <div id="container">
-        <div id="box">
-            <div class="input"><label for="min">min</label><input type="number" id='min'></div>
-            <div class="input"><label for="max">max</label><input type="number" id="max"></div>
-            <div id="btn"><input type="button" value="generate"></div>
-            <div id="output">= 0</div>
-        </div>
-    </div>
 
 
 
