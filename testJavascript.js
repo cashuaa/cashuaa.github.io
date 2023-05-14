@@ -16,9 +16,8 @@ inputBox.onkeyup = function(){
     if (input.length)
     {
         result = availableKeywords.filter((keyword) => {
-            return keyword.toLowerCase().includes(inputtoLowerCase());
+            return keyword.toLowerCase().includes(input.toLowercase());
         });
-        console.log(result)
     }
 
     display(result);
@@ -31,5 +30,6 @@ function display(result)
         return "<li>" + list + "</li>";
     });
 
-    resultsBox.innerHTML = "<ul>" + content + "</ul>";
+
+    resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
