@@ -1,6 +1,3 @@
-createElement();
-
-
 let availableKeywords = [
     'Night Bomber',
     'Speed Canard',
