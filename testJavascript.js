@@ -1,26 +1,22 @@
 createElement();
 
-function changeImage() 
-{
-    if (document.getElementById("imgClickAndChange").src === "/Users/joshuacash/Desktop/newSiteAttempt/pictures/night_bomber.png")
+
+let availableKeywords = [
+    'Night Bomber',
+    'Speed Canard',
+    ];
+
+const resultsBox = document.querySelector(".list-container");
+
+const inputBox = document.getElementById("input-box");
+
+inputBox.onkeyup = function(){
+    let results = [];
+    let input = inputBox.value;
+    if (input.length)
     {
-        document.getElementById("imgClickAndChange").src = "/Users/joshuacash/Desktop/newSiteAttempt/pictures/testAircraftTopView.jpeg";
-    } 
-    else if (document.getElementById("imgClickAndChange").src === "/Users/joshuacash/Desktop/newSiteAttempt/pictures/Speed_Canard_1.jpeg") 
-    {
-        document.getElementById("imgClickAndChange").src = "/Users/joshuacash/Desktop/newSiteAttempt/pictures/night_bomber.png";
+        result = availableKeywords.filter((keyword) => {
+            return keyword.toLowerCase().includes(inputtoLowerCase());
+        });
     }
-    else 
-    {
-        document.getElementById("imgClickAndChange").src = "/Users/joshuacash/Desktop/newSiteAttempt/pictures/Speed_Canard_1.png";
-    }
-}
-
-
-const img = document.querySelector('img');
-//img.addEventListener('click', toggleBlur);
-
-function toggleBlur() 
-{
-    this.classList.toggle('blur');
 }
