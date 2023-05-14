@@ -1,6 +1,9 @@
 let availableKeywords = [
     'Night Bomber',
     'Speed Canard',
+    'test',
+    'test1'
+    'joshua'
     ];
 
 const resultsBox = document.querySelector(".result-box");
