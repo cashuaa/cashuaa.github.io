@@ -35,7 +35,7 @@ a
   overflow: hidden;
   background-color:#333;
   postion:fixed;
-  top:0;
+  top:0px;
   width:100%;
 }
 
@@ -68,7 +68,6 @@ a
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  background-color: seagreen;
   scroll-snap-align: start;
 }
 
@@ -77,7 +76,6 @@ a
   justify-content: center;
   height: 100vh;
   line-height: 100vh;
-  background-color: darkred;
   scroll-snap-align: start;
 }
 
@@ -91,7 +89,6 @@ span
 .list-container
 {  
   height: 100vh;
-  background-color: blue;
   scroll-snap-align: start;
 }
 
