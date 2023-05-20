@@ -111,6 +111,11 @@ span
   background:#e9f3ff;
 }
 
+.result-box{
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
 form 
 {
   color: white;
