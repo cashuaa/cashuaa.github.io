@@ -48,14 +48,6 @@ li
   padding: 0vh;
 }
 
-.scroll-area
-{
-  border: 5px solid;
-  border-color: cyan;
-  display: inline-flex;
-  scroll-snap-type: y mandatory;
-  flex-wrap:wrap;
-}
 #gameTitle
 {
   top:0px;
@@ -92,8 +84,6 @@ li
 {
   top:0px;
   left:0px;
- 
-  display: flex;
   position: absolute;
   background-color:#333;
 }
@@ -115,8 +105,8 @@ li
 
 .pageOne
 {
-  scroll-snap-align: center;
   display: inline-flex;
+
   border: 5px solid;
   border-color:darkorange;
 
@@ -126,6 +116,7 @@ li
 {
   position: relative;
   float: left;
+
   border: 5px solid;
   border-color:yellow;
 
@@ -137,19 +128,22 @@ li
   position: relative;
   float: left;
   vertical-align: auto;
+  
   border: 5px solid;
   border-color:red;
-  flex-direction: column;
+  
 }
 
 .search-box
 {
   position: relative;
-  border: 5px solid;
-  border-color:green;
   vertical-align: top;
   width: 50vh;
   height: 45vh;
+
+  border: 5px solid;
+  border-color:green;
+
 }
 
 .box{
