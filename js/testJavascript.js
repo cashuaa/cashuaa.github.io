@@ -5,7 +5,7 @@ const inputBox = document.getElementById("input-box");
 
 const submitButton = document.getElementById("submit-button");
 
-var x = document.getElementsByClassName("aircraftImgs");
+var x = document.getElementsByClassName("aircraftLineDrawings");
 var slideIndex = 1; 
 
 showDivs (slideIndex);
@@ -81,12 +81,14 @@ submitButton.onclick = function()
     console.log(x[slideIndex-1].id);
     if (inputBox.value.toLowerCase() == x[slideIndex-1].id.toLowerCase())
     {
-        document.getElementById("box").style.backgroundColor = "Green";
+        document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
+        document.getElementById("box").textContent = "correct";
 
     }
     else 
     {
-        document.getElementById("box").style.backgroundColor = "Red";
+        document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
+        document.getElementById("box").textContent = "incorrect";
     }
 
 }

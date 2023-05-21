@@ -5,36 +5,71 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>plane guesser</title>
+      <title>viz-recce</title>
     <link rel="stylesheet" type = "text/css" href="testcss.css">
   </head>
 
   <style>
-    .aircraftImgs {display:none;}
+    .aircraftLineDrawings {display:none;}
   </style>
   
-  <body>
+  <body>    
     <div class="navbar">
+      <a id="line-drawings">line drawings</a>
+      <a id="pictures"> pictures</a>
       <a id="naval">NOB</a>
       <a id="ground">GOB</a>
     </div>
     
     <h1 id="gameTitle">viz-recce</h1>
-
     <div class=scroll-area>
       <div class=pageOne>
         <div class="mainGame">
           <div class="content display-container">
-            <img class="aircraftImgs" id = "Osprey" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "B-17 Flying Fortess" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "B-52 Stratofortress" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "Mirage F-1" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "Super Etendard" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "Jaguar" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "Mirage 2000C" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "Mirage III" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "Rafale" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
-            <img class="aircraftImgs" id = "C-47 Skytrain" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Osprey" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "B-17 Flying Fortess" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "B-52 Stratofortress" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-1 Mirrage" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Super Etendard" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Jaguar" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Mirage 2000C" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Mirage III" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Rafale" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "C-47 Skytrain" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-14 Tomcat" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/F-14%20Tomcat.jpeg" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "EF-111A Raven" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/GENERAL_DYNAMICS_EF-111A_RAVEN.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-16 Fighting Falcon" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/GENERAL_DYNAMICS_F-16_FIGHTING_FALCON.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "A-6 Intruder" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/GRUMMAN_A-6_INTRUDER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "EA-6 Prowler" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/GRUMMAN_EA-6_PROWLER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-111B" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Gerneral_Dynamics_F-111B.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "E-2C Hawkeye" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Grumman_E-2C_Hawkeye.jpeg" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "C-130 Hercules" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Lockheed_C-130_Hercules.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-104 Starfighter" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Lockheed_F-104_STARFIGHTER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-114A Nighthawk" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Lockheed_F-117A_Nighthawk.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "SR-71A" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Lockheed_SR-71A.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "MiG-31 Foxhound" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/MIKOYAN-GUREVICH_MiG-31_FOXHOUND.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-4 Phantom 2" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/McDONNELL_DOUGLAS_F-4_PHANTOM_II.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-18 Hornet" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/McDONNELL_DOUGLAS_F-A-18_HORNET.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "F-15 Eagle" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/McDonnell_Douglas_F-15_Eagle.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "MiG-21 Fishbed" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/MiG-21_FISHBED.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "MiG-23" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Mikoyan-Gurevich_MiG-23.gif" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "MiG-25" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Mikoyan-Gurevich_MiG-25.gif" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "MiG-27" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Mikoyan_MiG-27.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-24 Fencer" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/SUKHOI_Su-24_FENCER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-27 Flanker" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/SUKHOI_Su-27_FLANKER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-7B Fitter A" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/SUKHOI_Su-7B_FITTER_A.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-25" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Suchoi_Su-25.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-30" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Sukhoi_Su-30.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-34" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Sukhoi_Su-34.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Su-9" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Sukhoi_Su-9.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Tu-16 Badger" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-16_BADGER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Tu-22 Blinder" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-22_BLINDER.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Tu-26 Backfire" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-26_BACKFIRE.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Tu-95MS" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-95MS.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Tu-95 Bear" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-95_BEAR.png" style="height: 400px; width: 400px">
+            <img class="aircraftLineDrawings" id = "Tu-160" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolew_Tu-160.png" style="height: 400px; width: 400px">
+
+
             <button class="button black display-left" onclick="plusDivs(-1)">Previous</button>
             <button class="button black display-right" onclick="plusDivs(1)">Next</button>
           </div>
@@ -48,12 +83,12 @@
           </div>
           <div class = "result-box">
           </div>
-          <div id="box" class="box"></div>
+          <div id="box" class="box">  </div>
         </div>
         
         <section class="list-container">
           <h2 id="list">List of aircraft</h2>
-          <ul id="aircraft" role="listbox">
+          <ul id="aircraft-list" role="listbox">
             <li>Night Bomber</li>
             <li>Speed Canard</li>
             <li>Osprey</li>
@@ -66,6 +101,37 @@
             <li>Mirrage 3</li>
             <li>Rafale</li>
             <li>C-47 Skytrain</li>
+            <li>F-14 Tomcat</li>
+            <li>EF-111A Raven</li>
+            <li>F-16 Fighting Falcon</li>
+            <li>A-6 Intruder</li>
+            <li>F-111B</li>
+            <li>E-2C Hawkeye</li>
+            <li>C-130 Hercules</li>
+            <li>F-104 Starfighter</li>
+            <li>F-114A Nighthawk</li>
+            <li>SR-71A</li>
+            <li>MiG-31 Foxhound</li>
+            <li>F-4 Phantom 2</li>
+            <li>F-18 Hornet</li>
+            <li>F-15 Eagle</li>
+            <li>MiG-21 Fishbed</li>
+            <li>MiG-23</li>
+            <li>MiG-25</li>
+            <li>MiG-27</li>
+            <li>Su-24 Fencer</li>
+            <li>Su-27 Flanker</li>
+            <li>Su-7B Fitter A</li>
+            <li>Su-25</li>
+            <li>Su-30</li>
+            <li>Su-34</li>
+            <li>Su-9</li>
+            <li>Tu-16 Badger</li>
+            <li>Tu-22 Blinder</li>
+            <li>Tu-26 Backfire</li>
+            <li>Tu-95MS</li>
+            <li>Tu-95 Bear</li>
+            <li>Tu-160</li>
           </ul>
         </section>
       </div>

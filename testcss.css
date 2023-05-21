@@ -38,13 +38,15 @@ a
 li
 {
   list-style-type: none;
+  margin: 0vh;
+  padding: 0vh;
 }
 
 .scroll-area
 {
   border: 5px solid;
   border-color: cyan;
-
+  display: inline-flex;
   scroll-snap-type: y mandatory;
   flex-wrap:wrap;
 }
@@ -73,6 +75,12 @@ li
   color: dimgrey;
 }
 
+#aircraft-list
+{
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
 .navbar 
 {
   top:0px;
@@ -101,9 +109,7 @@ li
 .pageOne
 {
   scroll-snap-align: center;
-
   display: inline-flex;
-
   border: 5px solid;
   border-color:darkorange;
 
@@ -113,8 +119,6 @@ li
 {
   position: relative;
   float: left;
-  width: 37vw;
-
   border: 5px solid;
   border-color:yellow;
 
@@ -154,7 +158,6 @@ span
 .list-container
 {  
   scroll-snap-align: center;
-
 
   border: 5px solid;
   border-color:rebeccapurple;
@@ -203,7 +206,9 @@ img
   height: 10%;
   border: 1px solid black;
   margin: 0px;
-  padding: 0px;
-  background-color:darkslategray;
-
+  padding: 5px;
+  background-color:rgb(68, 68, 68);
+  font-size: 30px;
+  color: white;
+  text-align: center;
 }
