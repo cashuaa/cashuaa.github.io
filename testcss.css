@@ -42,11 +42,11 @@ li
 
 .scroll-area
 {
-
   border: 5px solid;
   border-color: cyan;
 
   scroll-snap-type: y mandatory;
+  flex-wrap:wrap;
 }
 #gameTitle
 {
@@ -77,8 +77,8 @@ li
 {
   top:0px;
   left:0px;
-  height:50px;
-  width:35%;
+ 
+  display: flex;
   position: absolute;
   background-color:#333;
 }
@@ -101,7 +101,8 @@ li
 .pageOne
 {
   scroll-snap-align: center;
-  height: 85vh;
+
+  display: inline-flex;
 
   border: 5px solid;
   border-color:darkorange;
@@ -112,7 +113,6 @@ li
 {
   position: relative;
   float: left;
-  height: 80vh;
   width: 37vw;
 
   border: 5px solid;
@@ -124,8 +124,6 @@ li
 {
   position: relative;
   float:left;
-  height: 80vh;
-  width: 37vw;
 
   border: 5px solid;
   border-color:green;
@@ -134,7 +132,9 @@ li
 
 .rules-container
 {
-  justify-content: center;
+  position: relative;
+  float: left;
+  
   scroll-snap-align: center;
   height: 100vh;
   line-height: 100vh;
@@ -154,7 +154,7 @@ span
 .list-container
 {  
   scroll-snap-align: center;
-  height: 100vh;
+
 
   border: 5px solid;
   border-color:rebeccapurple;
