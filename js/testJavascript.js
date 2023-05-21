@@ -43,7 +43,7 @@ inputBox.onkeyup = function()
     let input = inputBox.value;
     if (input.length)
     {
-        result = aircraftKeywords.filter((keyword) => 
+        result = lineAircraftKeywords.filter((keyword) => 
         {
             return keyword.toLowerCase().includes(input.toLowerCase());
         });
@@ -89,6 +89,7 @@ submitButton.onclick = function()
     {
         document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
         document.getElementById("box").textContent = "incorrect";
+        document.getElementById("box").style.animate = "horizontal-shaking 1.35s infinite";
     }
 
 }

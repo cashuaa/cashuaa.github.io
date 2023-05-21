@@ -14,6 +14,11 @@ body
   background-image: url("https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/background.png");
 }
 
+.aircraftLineDrawings 
+{
+  display:none;
+}
+
 * 
 {
   border-radius: 2vh;
@@ -25,6 +30,7 @@ body
   text-transform: uppercase;
   box-sizing: border-box;
 }
+
 p 
 {
   color: white;
@@ -81,6 +87,7 @@ li
   -webkit-columns: 3;
   -moz-columns: 3;
 }
+
 .navbar 
 {
   top:0px;
@@ -124,28 +131,39 @@ li
 
 }
 
-.search-box
-{
-  position: relative;
-  float:left;
 
-  border: 5px solid;
-  border-color:green;
-
-}
-
-.rules-container
+.guess-and-results
 {
   position: relative;
   float: left;
-  
-  scroll-snap-align: center;
-  height: 100vh;
-  line-height: 100vh;
-
+  vertical-align: auto;
   border: 5px solid;
-  border-color:powderblue;
+  border-color:red;
+  flex-direction: column;
+}
 
+.search-box
+{
+  position: relative;
+  border: 5px solid;
+  border-color:green;
+  vertical-align: top;
+  width: 50vh;
+  height: 45vh;
+}
+
+.box{
+  vertical-align: bottom;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  border: 1px solid black;
+  margin: 0px;
+  padding: 5px;
+  background-color:rgb(68, 68, 68);
+  font-size: 30px;
+  color: white;
+  text-align: center;
 }
 
 span
@@ -184,13 +202,9 @@ span
 }
 
 .result-box{
-  max-height: 50vh;
+  max-height: 25vh;
   overflow-y: scroll;
-}
 
-form 
-{
-  color: white;
 }
 
 img
@@ -199,16 +213,4 @@ img
   margin-left: auto;
   margin-right: auto;
   width:100%;
-}
-
-.box{
-  width: 100%;
-  height: 10%;
-  border: 1px solid black;
-  margin: 0px;
-  padding: 5px;
-  background-color:rgb(68, 68, 68);
-  font-size: 30px;
-  color: white;
-  text-align: center;
 }

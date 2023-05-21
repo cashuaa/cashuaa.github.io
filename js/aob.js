@@ -1,4 +1,4 @@
-let aircraftKeywords = [
+let lineAircraftKeywords = [
     'OSPREY',
     'B-17 FLYING FORTESS',
     'B-52 STRATOFORTRESS',
@@ -9,7 +9,6 @@ let aircraftKeywords = [
     'MIRRAGE III',
     'RAFALE',
     'C-47 SKYTRAIN',
-
     'F-14 Tomcat',
     'EF-111A Raven',
     'F-16 Fighting Falcon',

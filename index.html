@@ -8,10 +8,6 @@
       <title>viz-recce</title>
     <link rel="stylesheet" type = "text/css" href="testcss.css">
   </head>
-
-  <style>
-    .aircraftLineDrawings {display:none;}
-  </style>
   
   <body>    
     <div class="navbar">
@@ -74,23 +70,21 @@
             <button class="button black display-right" onclick="plusDivs(1)">Next</button>
           </div>
         </div>
-
-        <div class="search-box">
-          <h3> <label for="fname">Guess:</label> </h3>
-          <div class = "row">
-            <input type="text" id="input-box" autocomplete="off" placeholder="aircraft name"> 
-            <input type="submit" id="submit-button" value="Submit">
-          </div>
-          <div class = "result-box">
+        <div class="guess-and-results">
+          <div class="search-box">
+            <h3> <label for="fname">Guess</label> </h3>
+            <div class = "row">
+              <input type="text" id="input-box" autocomplete="off" placeholder="aircraft name"> 
+              <input type="submit" id="submit-button" value="Submit">
+            </div>
+            <div class = "result-box">
+            </div>
           </div>
           <div id="box" class="box">  </div>
         </div>
-        
         <section class="list-container">
           <h2 id="list">List of aircraft</h2>
           <ul id="aircraft-list" role="listbox">
-            <li>Night Bomber</li>
-            <li>Speed Canard</li>
             <li>Osprey</li>
             <li>B-17 Flying Fortess</li>
             <li>B-52 Stratofortress</li>
