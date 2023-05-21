@@ -17,19 +17,20 @@
 </style>
 
 <body>
-<!--  
-  TODO: fix this
+
 <div class="navbar">
     <a href="#game">game </a>
     <a href="#rules">rules </a>
     <a href="#list">aircraft </a>
+    <a id="naval">NOB</a>
+    <a id="ground">GOB</a>
 
 </div>
--->
-  <div class=scrollSection>
-    <section class="mainGame">
+<h1 id="gameTitle">viz-recce</h1>
 
-    <h1 id="game">viz-recce</h1>
+<div class=scroll-area>
+  <div class=pageOne>
+    <section class="mainGame">
 
 
   <div class="content display-container">
@@ -47,8 +48,8 @@
 
     <button class="button black display-left" onclick="plusDivs(-1)">Previous</button>
     <button class="button black display-right" onclick="plusDivs(1)">Next</button>
-
   </div>
+  </section>
 
   <script>
 
@@ -84,9 +85,9 @@
       }
   </script>
 
-
-      <h3> <label for="fname">Guess:</label> </h3>
+  <section>
       <div class="search-box">
+        <h3> <label for="fname">Guess:</label> </h3>
         <div class = "row">
           <input type="text" id="input-box" autocomplete="off" placeholder="aircraft name"> 
           <input type="submit" value="Submit">
@@ -94,10 +95,9 @@
         <div class = "result-box">
         </div>
       </div>
-    
-  
-
   </section>
+    </div>
+
     <section class="rules-container"><span>
 
       <h2 id="rules">Rules</h2>
@@ -121,10 +121,9 @@
           <li id="Speed_Canard_5" role="option">C-47 Skytrain</li>
       </ul>
     </section>
-  </div>
   <div class = "result-box">
   </div>
-
+</div>
 <script src="testJavascript.js"></script>
 </body>
 

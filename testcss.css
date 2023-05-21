@@ -14,12 +14,17 @@ body
   background-image: url("https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/background.png");
 }
 
-h1 
+* 
 {
-  font-size: 300%;
-  color: whitesmoke;
+  border-radius: 2vh;
+  margin: 2vh;
+  padding: 1vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  text-transform: uppercase
+  box-sizing: border-box;
 }
-
 p 
 {
   color: white;
@@ -30,22 +35,58 @@ a
   color: white;
 }
 
+li
+{
+  list-style-type: none;
+}
+
+.scroll-area
+{
+
+  border: 5px solid;
+  border-color: cyan;
+
+  scroll-snap-type: y mandatory;
+}
+#gameTitle
+{
+  top:0px;
+  font-size: 300%;
+  color: whitesmoke;
+  text-align: center;
+  postion:absolute;
+  justify-content: center;
+  height:1vh;
+  margin:0px;
+  padding:0px;
+  text-transform: uppercase
+}
+
+#naval
+{
+  color: dimgrey;
+}
+
+#ground
+{
+  color: dimgrey;
+}
+
 .navbar 
 {
-  overflow: hidden;
-  background-color:#333;
-  postion:fixed;
   top:0px;
-  width:100%;
+  left:0px;
+  height:50px;
+  width:35%;
+  position: absolute;
+  background-color:#333;
 }
 
 .navbar a
 {
   float:left;
-  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
   text-decoration:none;
   font-size:17px;
 }
@@ -56,27 +97,48 @@ a
   color:black;
 }
 
-.scrollSection
+.pageOne
 {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+  scroll-snap-align: center;
+  height: 85vh;
+
+  border: 5px solid;
+  border-color:darkorange;
+
 }
 
 .mainGame
 {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-snap-align: start;
+  position: relative;
+  float: left;
+  height: 80vh;
+  width: 37vw;
+  border: 5px solid;
+  border-color:yellow;
+
+}
+
+.search-box
+{
+  position: relative;
+  float:left;
+  height: 80vh;
+  width: 37vw;
+  border: 5px solid;
+  border-color:green;
+
 }
 
 .rules-container
 {
   justify-content: center;
+  scroll-snap-align: center;
   height: 100vh;
   line-height: 100vh;
-  scroll-snap-align: start;
+
+  border: 5px solid;
+  border-color:powderblue;
+
 }
 
 span
@@ -88,21 +150,23 @@ span
 
 .list-container
 {  
+  scroll-snap-align: center;
   height: 100vh;
-  scroll-snap-align: start;
+  border: 5px solid;
+  border-color:rebeccapurple;
 }
 
 .result-box ul
 {
   border-top: 1px;
-  padding: 15px 10px;
+  padding: 1vh 1vw;
 }
 
 .result-box ul li
 {
   list-style:none;
   border-radius: 3px;
-  padding: 15px 10px;
+  padding: 1vh 1vw;
   cursor: pointer;
 }
 
@@ -112,7 +176,7 @@ span
 }
 
 .result-box{
-  max-height: 200px;
+  max-height: 50vh;
   overflow-y: scroll;
 }
 
@@ -129,14 +193,3 @@ img
   width:100%;
 }
 
-* 
-{
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  text-align: center;
-  text-transform: uppercase
-  box-sizing: border-box;
-}

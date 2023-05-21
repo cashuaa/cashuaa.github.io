@@ -1,9 +1,17 @@
-let availableKeywords = [
+let availableAircraftKeywords = [
     'Night Bomber',
     'Speed Canard',
     'test',
     'test1',
     'joshua',
+    ];
+
+let availableNavalKeywords = [
+    'naval1'
+    ];
+
+let availableGroundKeywords = [
+    'ground1'
     ];
 
 const resultsBox = document.querySelector(".result-box");
@@ -15,7 +23,7 @@ inputBox.onkeyup = function(){
     let input = inputBox.value;
     if (input.length)
     {
-        result = availableKeywords.filter((keyword) => {
+        result = availableAircraftKeywords.filter((keyword) => {
             return keyword.toLowerCase().includes(input.toLowerCase());
         });
     }
