@@ -42,10 +42,10 @@ li
 
 .scroll-area
 {
-
+/*
   border: 5px solid;
   border-color: cyan;
-
+*/
   scroll-snap-type: y mandatory;
 }
 #gameTitle
@@ -59,6 +59,7 @@ li
   height:1vh;
   margin:0px;
   padding:0px;
+  padding-bottom:8vh;
   text-transform: uppercase
 }
 
@@ -101,10 +102,10 @@ li
 {
   scroll-snap-align: center;
   height: 85vh;
-
+/*
   border: 5px solid;
   border-color:darkorange;
-
+*/
 }
 
 .mainGame
@@ -113,9 +114,10 @@ li
   float: left;
   height: 80vh;
   width: 37vw;
+/*
   border: 5px solid;
   border-color:yellow;
-
+*/
 }
 
 .search-box
@@ -124,9 +126,10 @@ li
   float:left;
   height: 80vh;
   width: 37vw;
+/*
   border: 5px solid;
   border-color:green;
-
+*/
 }
 
 .rules-container
@@ -135,10 +138,10 @@ li
   scroll-snap-align: center;
   height: 100vh;
   line-height: 100vh;
-
+/*
   border: 5px solid;
   border-color:powderblue;
-
+*/
 }
 
 span
@@ -152,8 +155,10 @@ span
 {  
   scroll-snap-align: center;
   height: 100vh;
+  /*
   border: 5px solid;
   border-color:rebeccapurple;
+  */
 }
 
 .result-box ul
