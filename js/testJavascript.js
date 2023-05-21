@@ -79,5 +79,14 @@ submitButton.onclick = function()
 {
     console.log(inputBox.value);
     console.log(x[slideIndex-1].id);
-    
+    if (inputBox.value.toLowerCase() == x[slideIndex-1].id.toLowerCase())
+    {
+        document.getElementById("box").style.backgroundColor = "Green";
+
+    }
+    else 
+    {
+        document.getElementById("box").style.backgroundColor = "Red";
+    }
+
 }
