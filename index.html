@@ -1,112 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>plane guesser</title>
+  <head>
+    <html lang="en">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>plane guesser</title>
+    <link rel="stylesheet" type = "text/css" href="testcss.css">
+  </head>
 
-	<link rel="stylesheet" type = "text/css" href="testcss.css">
-</head>
-
-
-<style>
-  .aircraftImgs {display:none;}
-</style>
-
-<body>
-
-<div class="navbar">
-    <a href="#game">game </a>
-    <a href="#rules">rules </a>
-    <a href="#list">aircraft </a>
-    <a id="naval">NOB</a>
-    <a id="ground">GOB</a>
-
-</div>
-<h1 id="gameTitle">viz-recce</h1>
-
-<div class=scroll-area>
-  <div class=pageOne>
-    <section class="mainGame">
-
-
-  <div class="content display-container">
-
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
-    <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
-
-    <button class="button black display-left" onclick="plusDivs(-1)">Previous</button>
-    <button class="button black display-right" onclick="plusDivs(1)">Next</button>
-  </div>
-  </section>
-
-  <script>
-
-    var slideIndex = 1; 
-    showDivs (slideIndex);
-
-    function plusDivs(n)
-    {
-      showDivs(slideIndex += n);
-    }
-
-    function showDivs(n)
-      {
-        var i; 
-        var x = document.getElementsByClassName("aircraftImgs");
-
-        if ( n > x.length ) 
-          {
-            slideIndex = 1
-          }
-
-        if ( n < 1 ) 
-          {
-            slideIndex = x.length 
-          }
-
-        for(i=0; i<x.length; i++)
-          {
-            x[i].style.display = "none";
-          }
-
-        x[slideIndex-1].style.display = "block";
-      }
-  </script>
-
-  <section>
-      <div class="search-box">
-        <h3> <label for="fname">Guess:</label> </h3>
-        <div class = "row">
-          <input type="text" id="input-box" autocomplete="off" placeholder="aircraft name"> 
-          <input type="submit" value="Submit">
-        </div>
-        <div class = "result-box">
-        </div>
-      </div>
-  </section>
+  <style>
+    .aircraftImgs {display:none;}
+  </style>
+  
+  <body>
+    <div class="navbar">
+      <a href="#game">game </a>
+      <a href="#rules">rules </a>
+      <a href="#list">aircraft </a>
+      <a id="naval">NOB</a>
+      <a id="ground">GOB</a>
     </div>
+    
+    <h1 id="gameTitle">viz-recce</h1>
 
-    <section class="rules-container"><span>
+    <div class=scroll-area>
+      <div class=pageOne>
+        <section class="mainGame">
+          <div class="content display-container">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_MIRAGE_F1.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/DASSAULT-BREGUET_SUPER_ETENDARD.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Jaguar.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_2000C_.gif" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Mirage_III_3.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Dassault_Rafale.png" style="height: 400px; width: 400px">
+            <img class="aircraftImgs" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Douglas_C-47_Skytrain.png" style="height: 400px; width: 400px">
+            <button class="button black display-left" onclick="plusDivs(-1)">Previous</button>
+            <button class="button black display-right" onclick="plusDivs(1)">Next</button>
+          </div>
+        </section>
+        <script>
+          var slideIndex = 1; 
+          showDivs (slideIndex);
+          function plusDivs(n)
+          {
+            showDivs(slideIndex += n);
+          }
+          function showDivs(n)
+          {
+            var i; 
+            var x = document.getElementsByClassName("aircraftImgs");
+            if ( n > x.length ) 
+            {
+              slideIndex = 1
+            }
+            if ( n < 1 ) 
+            {
+              slideIndex = x.length 
+            }
+            for(i=0; i<x.length; i++)
+            {
+              x[i].style.display = "none";
+            }
 
-      <h2 id="rules">Rules</h2>
-      <p>these are the rules for how this works; type in your guess, hit guess. if you don't want to guess this one, you can click "next" to move on to the next one. </p>
-    </span></section>
-
-    <section class="list-container">
-      <h2 id="list">List of aircraft</h2>
-       <ul id="aircraft" role="listbox">
+            x[slideIndex-1].style.display = "block";
+          }
+        </script>
+        <section>
+          <div class="search-box">
+            <h3> <label for="fname">Guess:</label> </h3>
+            <div class = "row">
+              <input type="text" id="input-box" autocomplete="off" placeholder="aircraft name"> 
+              <input type="submit" value="Submit">
+            </div>
+            <div class = "result-box">
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="rules-container">
+        <span>
+          <h2 id="rules">Rules</h2>
+          <p>these are the rules for how this works; type in your guess, hit guess. if you don't want to guess this one, you can click "next" to move on to the next one. </p>
+        </span>
+      </section>
+      <section class="list-container">
+        <h2 id="list">List of aircraft</h2>
+        <ul id="aircraft" role="listbox">
           <li id="night_bomber" role="option">Night Bomber</li>
           <li id="Speed_Canard" role="option">Speed Canard</li>
           <li id="night_bomber_1" role="option">Osprey</li>
@@ -119,12 +102,11 @@
           <li id="Speed_Canard_4" role="option">Mirrage 3</li>
           <li id="night_bomber_5" role="option">Rafale</li>
           <li id="Speed_Canard_5" role="option">C-47 Skytrain</li>
-      </ul>
-    </section>
-  <div class = "result-box">
-  </div>
-</div>
-<script src="testJavascript.js"></script>
-</body>
-
+        </ul>
+      </section>
+      <div class = "result-box">
+      </div>
+    </div>
+    <script src="testJavascript.js"></script>
+  </body>
 </html>
