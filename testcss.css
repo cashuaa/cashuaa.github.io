@@ -17,11 +17,13 @@ body
 .aircraftLineDrawings 
 {
   display:none;
+  object-fit: contain;
 }
 
 .aircraftRealDrawings
 {
   display:none;
+  object-fit: contain;
 }
 
 
