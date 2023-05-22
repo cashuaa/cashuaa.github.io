@@ -19,6 +19,12 @@ body
   display:none;
 }
 
+.aircraftRealDrawings
+{
+  display:none;
+}
+
+
 * 
 {
   border-radius: 2vh;
@@ -73,11 +79,17 @@ li
   color: dimgrey;
 }
 
-#aircraft-list
+#aircraft-line-list
 {
   columns: 3;
   -webkit-columns: 3;
   -moz-columns: 3;
+  display:block;
+}
+
+#aircraft-real-list
+{
+  display:none;
 }
 
 .navbar 
@@ -106,7 +118,6 @@ li
 .pageOne
 {
   display: inline-flex;
-
   border: 5px solid;
   border-color:darkorange;
 

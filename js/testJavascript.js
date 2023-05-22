@@ -1,11 +1,18 @@
-
 const resultsBox = document.querySelector(".result-box");
-
 const inputBox = document.getElementById("input-box");
-
 const submitButton = document.getElementById("submit-button");
+const lineDrawings = document.getElementById("line-drawings");
+const pictures = document.getElementById("pictures");
 
-var x = document.getElementsByClassName("aircraftLineDrawings");
+const aircraftLineList = document.getElementById("aircraft-line-list");
+const aircraftRealList = document.getElementById("aircraft-real-list");
+
+var aircraftLine = document.getElementsByClassName("aircraftLineDrawings");
+var aircraftReal = document.getElementsByClassName("aircraftRealDrawings");
+var whichPictures = aircraftLine;
+
+
+
 var slideIndex = 1; 
 
 showDivs (slideIndex);
@@ -18,22 +25,23 @@ function plusDivs(n)
 function showDivs(n)
 {
     var index; 
-    if ( n > x.length ) 
+
+    if ( n > whichPictures.length ) 
     {
         slideIndex = 1
     }
     if ( n < 1 ) 
     {
-        slideIndex = x.length 
+        slideIndex = whichPictures.length 
     }
-    for(index=0; index<x.length; index++)
+    for( index = 0; index < whichPictures.length; index++ )
     {
-        x[index].style.display = "none";
+        whichPictures[index].style.display = "none";
     }
 
-    x[slideIndex-1].style.display = "block";
+    whichPictures[slideIndex-1].style.display = "block";
 
-    console.log(x[slideIndex-1].id);
+    console.log(whichPictures[slideIndex-1].id);
 }
 
 
@@ -43,10 +51,20 @@ inputBox.onkeyup = function()
     let input = inputBox.value;
     if (input.length)
     {
-        result = lineAircraftKeywords.filter((keyword) => 
+        if (whichPictures == aircraftLine)
+        {    
+            result = lineAircraftKeywords.filter((keyword) => 
+            {
+                return keyword.toLowerCase().includes(input.toLowerCase());
+            });
+        }
+        else if (whichPictures == aircraftReal)
         {
-            return keyword.toLowerCase().includes(input.toLowerCase());
-        });
+            result = realAircraftKeywords.filter((keyword) => 
+            {
+                return keyword.toLowerCase().includes(input.toLowerCase());
+            });
+        }
     }
 
 
@@ -78,8 +96,8 @@ function selectInput(list)
 submitButton.onclick = function()
 {
     console.log(inputBox.value);
-    console.log(x[slideIndex-1].id);
-    if (inputBox.value.toLowerCase() == x[slideIndex-1].id.toLowerCase())
+    console.log(whichPictures[slideIndex-1].id);
+    if (inputBox.value.toLowerCase() == whichPictures[slideIndex-1].id.toLowerCase())
     {
         document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
         document.getElementById("box").textContent = "correct";
@@ -89,7 +107,35 @@ submitButton.onclick = function()
     {
         document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
         document.getElementById("box").textContent = "incorrect";
-        document.getElementById("box").style.animate = "horizontal-shaking 1.35s infinite";
     }
+
+}
+
+
+lineDrawings.onclick = function()
+{
+    whichPictures = aircraftLine;
+    for( index = 0; index < aircraftReal.length; index++ )
+    {
+        aircraftReal[index].style.display = "none";
+    }
+    whichPictures[0].style.display = "block";
+
+    aircraftLineList.style.display = "block";
+    aircraftRealList.style.display = "none";
+
+}
+
+pictures.onclick = function()
+{
+    whichPictures = aircraftReal;
+    for( index = 0; index < aircraftLine.length; index++ )
+    {
+        aircraftLine[index].style.display = "none";
+    }
+    whichPictures[0].style.display = "block";
+
+    aircraftLineList.style.display = "none";
+    aircraftRealList.style.display = "block";
 
 }

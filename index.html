@@ -21,6 +21,7 @@
       <div class=pageOne>
         <div class="mainGame">
           <div class="content display-container">
+            <div class="aircraftLineHide">
             <img class="aircraftLineDrawings" id = "Osprey" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Bell_Boeing_MV-22_Osprey.png" style="height: 400px; width: 400px">
             <img class="aircraftLineDrawings" id = "B-17 Flying Fortess" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-17_Flying_Fortress.png" style="height: 400px; width: 400px">
             <img class="aircraftLineDrawings" id = "B-52 Stratofortress" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Boeing_B-52_STRATOFORTRESS.png" style="height: 400px; width: 400px">
@@ -63,7 +64,13 @@
             <img class="aircraftLineDrawings" id = "Tu-95MS" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-95MS.png" style="height: 400px; width: 400px">
             <img class="aircraftLineDrawings" id = "Tu-95 Bear" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolev_Tu-95_BEAR.png" style="height: 400px; width: 400px">
             <img class="aircraftLineDrawings" id = "Tu-160" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB%20Line%20Drawings/Tupolew_Tu-160.png" style="height: 400px; width: 400px">
+            </div>
 
+            <div class = "aircraftRealHide">
+            <img class="aircraftRealDrawings" id = "A-29 Super Tucano" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB_Photographs/A-29_Super%20Tucano.jpeg" style="height: 400px; width: 400px">
+            <img class="aircraftRealDrawings" id = "A-50U" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB_Photographs/A-50U.jpeg" style="height: 400px; width: 400px">
+            <img class="aircraftRealDrawings" id = "AC-130H Spectre" src="https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/AOB_Photographs/AC-130H_Spectre.jpeg" style="height: 400px; width: 400px">
+            </div>
 
             <button class="button black display-left" onclick="plusDivs(-1)">Previous</button>
             <button class="button black display-right" onclick="plusDivs(1)">Next</button>
@@ -83,7 +90,7 @@
         </div>
         <section class="list-container">
           <h2 id="list">List of aircraft</h2>
-          <ul id="aircraft-list" role="listbox">
+          <ul id="aircraft-line-list" role="listbox">
             <li>Osprey</li>
             <li>B-17 Flying Fortess</li>
             <li>B-52 Stratofortress</li>
@@ -125,6 +132,11 @@
             <li>Tu-95MS</li>
             <li>Tu-95 Bear</li>
             <li>Tu-160</li>
+          </ul>
+          <ul id="aircraft-real-list" role="listbox">
+            <li>A-29 Super Tucano</li>
+            <li>A-50U</li>
+            <li>AC-130H Spectre</li>
           </ul>
         </section>
       </div>

@@ -41,3 +41,9 @@ let lineAircraftKeywords = [
     'Tu-95 Bear',
     'Tu-160',
     ];
+
+let realAircraftKeywords = [
+    'A-29 Super Tucano',
+    'A-50U',
+    'AC-130H Spectre',
+];
