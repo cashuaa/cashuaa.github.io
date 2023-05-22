@@ -89,7 +89,12 @@ li
 
 #aircraft-real-list
 {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
   display:none;
+  overflow-x: scroll;
+  max-height: 45vh;
 }
 
 .navbar 
@@ -117,6 +122,7 @@ li
 
 .pageOne
 {
+  position: relative;
   display: inline-flex;
   border: 5px solid;
   border-color:darkorange;
@@ -184,7 +190,6 @@ span
 
   border: 5px solid;
   border-color:rebeccapurple;
-
 }
 
 .result-box ul
