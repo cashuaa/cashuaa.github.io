@@ -114,28 +114,33 @@ submitButton.onclick = function()
 
 lineDrawings.onclick = function()
 {
-    whichPictures = aircraftLine;
-    for( index = 0; index < aircraftReal.length; index++ )
+    if (whichPictures != aircraftLine)
     {
-        aircraftReal[index].style.display = "none";
+        whichPictures = aircraftLine;
+        for( index = 0; index < aircraftLine.length; index++ )
+        {
+            aircraftReal[index].style.display = "none";
+        }
+        whichPictures[0].style.display = "block";
+
+        aircraftLineList.style.display = "block";
+        aircraftRealList.style.display = "none";
     }
-    whichPictures[0].style.display = "block";
-
-    aircraftLineList.style.display = "block";
-    aircraftRealList.style.display = "none";
-
 }
 
 pictures.onclick = function()
 {
-    whichPictures = aircraftReal;
-    for( index = 0; index < aircraftLine.length; index++ )
+    if (whichPictures != aircraftReal)
     {
-        aircraftLine[index].style.display = "none";
-    }
-    whichPictures[0].style.display = "block";
+        whichPictures = aircraftReal;
+        for( index = 0; index < aircraftLine.length; index++ )
+        {
+            aircraftLine[index].style.display = "none";
+        }
+        whichPictures[0].style.display = "block";
 
-    aircraftLineList.style.display = "none";
-    aircraftRealList.style.display = "block";
+        aircraftLineList.style.display = "none";
+        aircraftRealList.style.display = "block";
+    }
 
 }
