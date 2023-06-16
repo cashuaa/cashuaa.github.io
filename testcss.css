@@ -150,7 +150,6 @@ li
   height: 100%;
   border: 5px solid;
   border-color:red;
-  padding: 1%;
   
 }
 
@@ -253,4 +252,17 @@ img
   font-size: 12px;
   font-weight: 500;
   border-radius: 30px;
+}
+
+#aircraft-list
+{
+  display: none;
+  border: 5px solid;
+  border-color:rgb(20, 112, 155);
+}
+
+#toggle
+{
+  color:rgb(0, 0, 0);
+  
 }

@@ -144,3 +144,23 @@ pictures.onclick = function()
     }
 
 }
+
+
+function toggleDiv(divid)
+  {
+ 
+    varon = divid + 'list';
+    varoff = divid + 'guess';
+ 
+    if(document.getElementById(varon).style.display == 'block')
+    {
+    document.getElementById(varon).style.display = 'none';
+    document.getElementById(varoff).style.display = 'block';
+    }
+   
+    else
+    {  
+    document.getElementById(varoff).style.display = 'none';
+    document.getElementById(varon).style.display = 'block'
+    }
+} 

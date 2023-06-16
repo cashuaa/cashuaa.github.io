@@ -15,6 +15,7 @@
       <a id="pictures"> pictures</a>
       <a id="naval">NOB</a>
       <a id="ground">GOB</a>
+      <a href="javascript:;" id="toggle" onmousedown="toggleDiv('aircraft-');">Toggle</a>
     </div>
     
     <h1 id="gameTitle">viz-recce</h1>
@@ -178,7 +179,7 @@
           <button id="LRbutton" class="button black display-left" onclick="plusDivs(-1)">Previous</button>
           <button id="LRbutton" class="button black display-right" onclick="plusDivs(1)">Next</button>
         </div>
-        <div class="guess-and-results">
+        <div id="aircraft-guess" class="guess-and-results">
           <div class="search-box">
             <h3> <label for="fname">Guess</label> </h3>
             <div class = "row">
@@ -190,175 +191,165 @@
           </div>
           <div id="box" class="box">  </div>
         </div>
-        <section class="list-container">
-          <h2 id="list">List of aircraft</h2>
-          <ul id="aircraft-line-list" role="listbox">
-            <li>Osprey</li>
-            <li>B-17 Flying Fortess</li>
-            <li>B-52 Stratofortress</li>
-            <li>F-1 Mirrage</li>
-            <li>Super Etendard</li>
-            <li>Jaguar</li>
-            <li>Mirrage 2000C</li>
-            <li>Mirrage 3</li>
-            <li>Rafale</li>
-            <li>C-47 Skytrain</li>
-            <li>F-14 Tomcat</li>
-            <li>EF-111A Raven</li>
-            <li>F-16 Fighting Falcon</li>
-            <li>A-6 Intruder</li>
-            <li>F-111B</li>
-            <li>E-2C Hawkeye</li>
-            <li>C-130 Hercules</li>
-            <li>F-104 Starfighter</li>
-            <li>F-114A Nighthawk</li>
-            <li>SR-71A</li>
-            <li>MiG-31 Foxhound</li>
-            <li>F-4 Phantom 2</li>
-            <li>F-18 Hornet</li>
-            <li>F-15 Eagle</li>
-            <li>MiG-21 Fishbed</li>
-            <li>MiG-23</li>
-            <li>MiG-25</li>
-            <li>MiG-27</li>
-            <li>Su-24 Fencer</li>
-            <li>Su-27 Flanker</li>
-            <li>Su-7B Fitter A</li>
-            <li>Su-25</li>
-            <li>Su-30</li>
-            <li>Su-34</li>
-            <li>Su-9</li>
-            <li>Tu-16 Badger</li>
-            <li>Tu-22 Blinder</li>
-            <li>Tu-26 Backfire</li>
-            <li>Tu-95MS</li>
-            <li>Tu-95 Bear</li>
-            <li>Tu-160</li>
-          </ul>
-          <ul id="aircraft-real-list" role="listbox">
-            <li>A-29 Super Tucano</li>
-            <li>A-50U</li>
-            <li>AC-130H Spectre</li>
-            <li>AN-124</li>
-            <li>AN-12BK</li>
-            <li>ANSAT_RF-285</li>
-            <li>An-26</li>
-            <li>An-30 (RUS)</li>
-            <li>An-22A Antei</li>
-            <li>An-72</li>
-            <li>B-1B</li>
-            <li>B-2 Spirit</li>
-            <li>B-52 Stratofortress</li>
-            <li>C-130J</li>
-            <li>C-130 Hercules</li>
-            <li>C-17 Globemaster</li>
-            <li>C-26</li>
-            <li>C-5 Galaxy</li>
-            <li>Chengdu Cloud</li>
-            <li>Chengdu F-7 (Pakistan AF)</li>
-            <li>E-11</li>
-            <li>E-3 Sentry</li>
-            <li>E-4B</li>
-            <li>E-8 JSTARS</li>
-            <li>E-130H Compass Call</li>
-            <li>E-130J Commando Solo</li>
-            <li>Eurocopter AS-350</li>
-            <li>Eurocopter AS-355</li>
-            <li>F-117 Nighthawk</li>
-            <li>F-15C Eagle</li>
-            <li>F-15E Strike Eagle</li>
-            <li>F-16</li>
-            <li>F-22 Raptor</li>
-            <li>F-35A</li>
-            <li>FTC2000G</li>
-            <li>A-10 Thunderbolt II (Warthog)</li>
-            <li>HH60 Pave</li>
-            <li>Harbin BZK-005</li>
-            <li>Harbin Z-9</li>
-            <li>Hongdu L-15 Falcon</li>
-            <li>Ilyushin Il-76MD</li>
-            <li>Ilyushin Il-78</li>
-            <li>Ilyushin Il-78M</li>
-            <li>J-10B</li>
-            <li>J-11</li>
-            <li>J-15</li>
-            <li>J-16</li>
-            <li>J-20</li>
-            <li>K8 (Pakistan AF)</li>
-            <li>KA-27</li>
-            <li>KC-10</li>
-            <li>KC-130J</li>
-            <li>KC-135R Stratotanker</li>
-            <li>KC-46 Pegasus</li>
-            <li>KJ-500</li>
-            <li>Kamov Ka-226</li>
-            <li>Kamov Ka-50</li>
-            <li>L-39ZA Albatros</li>
-            <li>MQ-9 Reaper</li>
-            <li>MV-22 Osprey</li>
-            <li>Mi-17</li>
-            <li>Mi-2</li>
-            <li>Mi-24</li>
-            <li>Mi-26</li>
-            <li>Mi-28</li>
-            <li>Mi-38</li>
-            <li>Mi-8</li>
-            <li>MiG-29</li>
-            <li>MiG-29K</li>
-            <li>MiG-35D</li>
-            <li>Mikoyan-Gurevich MiG-23</li>
-            <li>PLANAF GX-8</li>
-            <li>RC-135 Rivet Joint</li>
-            <li>RQ-4 Global Hawk</li>
-            <li>SA321 Super</li>
-            <li>SU-34</li>
-            <li>Shaanxi KJ-200</li>
-            <li>Shaanxi Y-8</li>
-            <li>Shenyang J-6</li>
-            <li>Shenyang J-8</li>
-            <li>Soar</li>
-            <li>Su-25</li>
-            <li>Su-35</li>
-            <li>Sukhoi Su-24</li>
-            <li>Sukhoi Su-27SKM</li>
-            <li>Sukhoi Su-30</li>
-            <li>Sukhoi Su-30SM</li>
-            <li>Sukhoi Su-33</li>
-            <li>Sukhoi Su-57</li>
-            <li>T-38 Talon</li>
-            <li>T-6A Texan II</li>
-            <li>TU-95 Bear</li>
-            <li>Tupolev Tu-160</li>
-            <li>Tupolev Tu-214R</li>
-            <li>Tupolev Tu-22M</li>
-            <li>U-2 Dragon Lady</li>
-            <li>UH-1N Huey</li>
-            <li>Wing Loong</li>
-            <li>Xian H-6K</li>
-            <li>XianJH-7A</li>
-            <li>Xian MA-600</li>
-            <li>Xian Y-20</li>
-            <li>Xian Y-7-100</li>
-            <li>Xian Y-7</li>
-            <li>Y-20</li>
-            <li>Y-9</li>
-            <li>Yakovlev Yak-130</li>
-          </ul>
-        </section>
+        <div id="aircraft-list">
+          <section class="list-container">
+            <h2 id="list">List of aircraft</h2>
+            <ul id="aircraft-line-list" role="listbox">
+              <li>Osprey</li>
+              <li>B-17 Flying Fortess</li>
+              <li>B-52 Stratofortress</li>
+              <li>F-1 Mirrage</li>
+              <li>Super Etendard</li>
+              <li>Jaguar</li>
+              <li>Mirrage 2000C</li>
+              <li>Mirrage 3</li>
+              <li>Rafale</li>
+              <li>C-47 Skytrain</li>
+              <li>F-14 Tomcat</li>
+              <li>EF-111A Raven</li>
+              <li>F-16 Fighting Falcon</li>
+              <li>A-6 Intruder</li>
+              <li>F-111B</li>
+              <li>E-2C Hawkeye</li>
+              <li>C-130 Hercules</li>
+              <li>F-104 Starfighter</li>
+              <li>F-114A Nighthawk</li>
+              <li>SR-71A</li>
+              <li>MiG-31 Foxhound</li>
+              <li>F-4 Phantom 2</li>
+              <li>F-18 Hornet</li>
+              <li>F-15 Eagle</li>
+              <li>MiG-21 Fishbed</li>
+              <li>MiG-23</li>
+              <li>MiG-25</li>
+              <li>MiG-27</li>
+              <li>Su-24 Fencer</li>
+              <li>Su-27 Flanker</li>
+              <li>Su-7B Fitter A</li>
+              <li>Su-25</li>
+              <li>Su-30</li>
+              <li>Su-34</li>
+              <li>Su-9</li>
+              <li>Tu-16 Badger</li>
+              <li>Tu-22 Blinder</li>
+              <li>Tu-26 Backfire</li>
+              <li>Tu-95MS</li>
+              <li>Tu-95 Bear</li>
+              <li>Tu-160</li>
+            </ul>
+            <ul id="aircraft-real-list" role="listbox">
+              <li>A-29 Super Tucano</li>
+              <li>A-50U</li>
+              <li>AC-130H Spectre</li>
+              <li>AN-124</li>
+              <li>AN-12BK</li>
+              <li>ANSAT_RF-285</li>
+              <li>An-26</li>
+              <li>An-30 (RUS)</li>
+              <li>An-22A Antei</li>
+              <li>An-72</li>
+              <li>B-1B</li>
+              <li>B-2 Spirit</li>
+              <li>B-52 Stratofortress</li>
+              <li>C-130J</li>
+              <li>C-130 Hercules</li>
+              <li>C-17 Globemaster</li>
+              <li>C-26</li>
+              <li>C-5 Galaxy</li>
+              <li>Chengdu Cloud</li>
+              <li>Chengdu F-7 (Pakistan AF)</li>
+              <li>E-11</li>
+              <li>E-3 Sentry</li>
+              <li>E-4B</li>
+              <li>E-8 JSTARS</li>
+              <li>E-130H Compass Call</li>
+              <li>E-130J Commando Solo</li>
+              <li>Eurocopter AS-350</li>
+              <li>Eurocopter AS-355</li>
+              <li>F-117 Nighthawk</li>
+              <li>F-15C Eagle</li>
+              <li>F-15E Strike Eagle</li>
+              <li>F-16</li>
+              <li>F-22 Raptor</li>
+              <li>F-35A</li>
+              <li>FTC2000G</li>
+              <li>A-10 Thunderbolt II (Warthog)</li>
+              <li>HH60 Pave</li>
+              <li>Harbin BZK-005</li>
+              <li>Harbin Z-9</li>
+              <li>Hongdu L-15 Falcon</li>
+              <li>Ilyushin Il-76MD</li>
+              <li>Ilyushin Il-78</li>
+              <li>Ilyushin Il-78M</li>
+              <li>J-10B</li>
+              <li>J-11</li>
+              <li>J-15</li>
+              <li>J-16</li>
+              <li>J-20</li>
+              <li>K8 (Pakistan AF)</li>
+              <li>KA-27</li>
+              <li>KC-10</li>
+              <li>KC-130J</li>
+              <li>KC-135R Stratotanker</li>
+              <li>KC-46 Pegasus</li>
+              <li>KJ-500</li>
+              <li>Kamov Ka-226</li>
+              <li>Kamov Ka-50</li>
+              <li>L-39ZA Albatros</li>
+              <li>MQ-9 Reaper</li>
+              <li>MV-22 Osprey</li>
+              <li>Mi-17</li>
+              <li>Mi-2</li>
+              <li>Mi-24</li>
+              <li>Mi-26</li>
+              <li>Mi-28</li>
+              <li>Mi-38</li>
+              <li>Mi-8</li>
+              <li>MiG-29</li>
+              <li>MiG-29K</li>
+              <li>MiG-35D</li>
+              <li>Mikoyan-Gurevich MiG-23</li>
+              <li>PLANAF GX-8</li>
+              <li>RC-135 Rivet Joint</li>
+              <li>RQ-4 Global Hawk</li>
+              <li>SA321 Super</li>
+              <li>SU-34</li>
+              <li>Shaanxi KJ-200</li>
+              <li>Shaanxi Y-8</li>
+              <li>Shenyang J-6</li>
+              <li>Shenyang J-8</li>
+              <li>Soar</li>
+              <li>Su-25</li>
+              <li>Su-35</li>
+              <li>Sukhoi Su-24</li>
+              <li>Sukhoi Su-27SKM</li>
+              <li>Sukhoi Su-30</li>
+              <li>Sukhoi Su-30SM</li>
+              <li>Sukhoi Su-33</li>
+              <li>Sukhoi Su-57</li>
+              <li>T-38 Talon</li>
+              <li>T-6A Texan II</li>
+              <li>TU-95 Bear</li>
+              <li>Tupolev Tu-160</li>
+              <li>Tupolev Tu-214R</li>
+              <li>Tupolev Tu-22M</li>
+              <li>U-2 Dragon Lady</li>
+              <li>UH-1N Huey</li>
+              <li>Wing Loong</li>
+              <li>Xian H-6K</li>
+              <li>XianJH-7A</li>
+              <li>Xian MA-600</li>
+              <li>Xian Y-20</li>
+              <li>Xian Y-7-100</li>
+              <li>Xian Y-7</li>
+              <li>Y-20</li>
+              <li>Y-9</li>
+              <li>Yakovlev Yak-130</li>
+            </ul>
+          </section>
+        </div>
       </div>
-      <div class = "todo-list">
-        <p>todo:</p>
-        <ul>
-          <li>randomize the order of aircraft every time </li>
-          <li>visual indicator of each instance of a guess </li>
-          <li>NOB / GOB (need pictures)</li>  
-          <li>fix sizing issues for more uniformity among all screen sizes</li>
-          <li>remove console output and ability to right click/go to image source</li>
-          <li>remove borders around everything</li>   
-          <li>fix the picture scroll on list of aircraft to be vertical not horizontal</li>     
-          <li>feedback?</li>
-        </ul>
-      </div>
+      
     <script src="js/testJavascript.js"></script>
     <script src="js/aob.js"></script>
     <script src="js/gob.js"></script>
