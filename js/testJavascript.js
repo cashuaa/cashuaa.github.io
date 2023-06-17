@@ -166,20 +166,18 @@ function toggleDiv(divid)
  
     if(document.getElementById(varon).style.display == 'block')
     {
-        document.getElementById(varoff).style.transition= 'transform 1s';
-        document.getElementById(varon).style.display = 'none';
-        document.getElementById(varoff).style.display = 'block';
         document.getElementById('flip-card').style.transform = "rotateY(" + 0 + "deg)";
         document.getElementById('flip-card').style.transition= 'transform 1s';
+        document.getElementById(varon).style.display = 'none';
+        document.getElementById(varoff).style.display = 'block';
     }
    
     else
     {  
-        document.getElementById(varon).style.transition= 'transform 1s';
+        document.getElementById('flip-card').style.transition= 'transform 1s';
+        document.getElementById('flip-card').style.transform = "rotateY(" + 180 + "deg)";
         document.getElementById(varoff).style.display = 'none';
         document.getElementById(varon).style.display = 'block';
-        document.getElementById('flip-card').style.transform = "rotateY(" + 180 + "deg)";
-        document.getElementById('flip-card').style.transition= 'transform 1s';
     }
 } 
 
