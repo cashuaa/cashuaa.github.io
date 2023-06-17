@@ -6,6 +6,7 @@ html
   scroll-behavior: smooth;
 }
 
+/* General attribute settings */ 
 body 
 {
   font-family: 'Baloo Bhai 2', cursive;
@@ -14,12 +15,19 @@ body
   background-image: url("https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/background.png");
 }
 
+
+/* Used to hide both items, will need new ones for 
+GoB and NoB when those get implemented. 
+This is what is changed to cycle visibility  */ 
 .aircraftLineDrawings 
 {
   display:none;
   object-fit: contain;
 }
 
+/* Used to hide both items, will need new ones for 
+GoB and NoB when those get implemented. 
+This is what is changed to cycle visibility  */ 
 .aircraftRealDrawings
 {
   display:none;
@@ -27,6 +35,7 @@ body
 }
 
 
+/* General attributes  */ 
 * 
 {
   border-radius: 2vh;
@@ -39,16 +48,21 @@ body
   box-sizing: border-box;
 }
 
+/* General paragraph attributes  */ 
 p 
 {
   color: white;
 }
 
+
+/* General a tag attributes  */ 
 a
 {
   color: white;
 }
 
+
+/* General list attributes  */ 
 li
 {
   list-style-type: none;
@@ -56,13 +70,13 @@ li
   padding: 0vh;
 }
 
+/* The whole Viz-Recce tile on top */ 
 #gameTitle
 {
   top:0px;
   font-size: 300%;
   color: whitesmoke;
   text-align: center;
-
   justify-content: center;
   height:1vh;
   margin:0px;
@@ -71,48 +85,44 @@ li
   text-transform: uppercase
 }
 
-#naval
-{
-  color: dimgrey;
-}
 
-#ground
-{
-  color: dimgrey;
-}
-
+/* The list within the right tile used for the Aircraft Line Drawings
+to define all possible aircraft, and used for clickable answers */ 
 #aircraft-line-list
 {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
   display:block;
-  overflow-x: scroll;
   max-height: 80%;
 }
 
+/* Aircraft Line List a tag attributes, (all of the buttons) */
 #aircraft-line-list a
 {
   padding: 0px;
   margin: 0px;
 }
 
+/* The list within the right tile used for the Aircraft Real pictures
+to define all possible aircraft, and used for clickable answers */ 
 #aircraft-real-list
 {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
   display:none;
-  overflow-x: scroll;
   max-height: 80%;
 }
 
+/* Aircraft Real List a tag attributes, (all of the buttons) */
 #aircraft-real-list a
 {
   padding: 0px;
   margin: 0px;
 }
 
+/* Navbar at the top that includes all of the buttons */
 .navbar 
 {
   top:0px;
@@ -122,6 +132,7 @@ li
   cursor: pointer;
 }
 
+/* Attributes used for the a tag items in the navbar  */ 
 .navbar a
 {
   float:left;
@@ -131,62 +142,189 @@ li
   font-size:17px;
 }
 
+/* Hover over the buttons attributes  */ 
 .navbar a:hover 
 {
   background: #ddd;
   color:black;
 }
 
+/* Button used to switch to Naval OB  */ 
+#naval
+{
+  color: dimgrey;
+}
+
+/* Button used to switch to Ground OB  */ 
+#ground
+{
+  color: dimgrey;
+}
+
+/* Button used to switch between the guess box and the clickable list  */ 
+#toggle
+{
+  color:rgb(0, 0, 0);
+}
+
+/* This encompasses everything except the health bar on the bottom, and 
+the correct/incorrect box. The mainGame and the flip-card are included in this
+box */ 
 .pageOne
 {
   position: relative;
   display: inline-flex;
-  border: 5px solid;
-  border-color:darkorange;
   height: 65vh;
   width: 60vw;
-
+  
+  border:darkorange /*5px solid*/;
 }
 
+/* Despite the name, this is simply the card to the left that shows the image
+and includes the next and previous buttons. */
 .mainGame
 {
   position: relative;
   float: left;
-  border: 5px solid;
-  border-color:yellow;
   width: 50%;
-
-
+ 
+  border:yellow /*5px solid*/;
 }
 
+/*the image displayed to the left, within the main game*/
+img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+  border: rgb(190, 100, 100) /*5px solid*/;
+}
+
+/* left and right button (prev / next) */
+#LRbutton
+{
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+
+/* The flip card includes the two items on the right, the list-of-aircraft, 
+or the type-to-enter ability. */
 #flip-card
 {
   position: relative;
   vertical-align: top;
   float: left;
   width: 50%;
-  border: 5px solid;
-  border-color:rgb(51, 197, 64);
   transform: rotateY(0deg);
   transition: transform 1s;
   transform-style:preserve-3d;
+  border:rgb(0, 0, 0) 2px solid;
 }
 
+
+/* this is the list container, it is the list used when switching to the 
+list of aircraft side of the flip-card. */
+.list-container
+{  
+  width: 90%;
+  max-height: 40vh;
+  overflow-y: scroll;
+
+  border: rgb(133, 0, 0)  /*5px solid*/;
+}
+
+#aircraft-list
+{
+  position: relative;
+  vertical-align: auto;
+  display: none;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  cursor: pointer;
+  border:rgb(20, 112, 155) /*5px solid*/;
+}
+
+#aircraft-list li:hover
+{
+  background:#646464;
+}
+
+
+
+/* this is the type-to-enter function, the backside of the flip-card
+for the list-of-aircraft functionality*/
 #aircraft-guess
 {
-
-  border: 5px solid;
-  border-color:red;
+  backface-visibility: hidden;
+  
+  border:red /*5px solid*/;
 }
 
+
+/* the search box is exactly what it sounds like, it's the actual 
+search box used to type in answers*/
 .search-box
 {
   position: relative;
   width: 90%;
-
-  
 }
 
+/* Result box and all of it's children, used to break out how the result box
+on the guess input side of the functionality behaves and looks*/
+.result-box{
+  max-height: 25vh;
+  overflow-y: scroll;
+
+}
+
+/* Result box as a whole */
+.result-box ul
+{
+  border-top: 1px;
+  padding: 1vh 1vw;
+  border: rgb(190, 100, 100) /*5px solid*/;
+
+}
+
+/* individual elements within the result box */
+.result-box ul li
+{
+  list-style:none;
+  border-radius: 3px;
+  padding: 1vh 1vw;
+  cursor: pointer;
+  border: rgb(190, 100, 100) /*5px solid*/;
+}
+
+/* hover over each element of the result box */
+.result-box ul li:hover
+{
+  background:#e9f3ff;
+}
+
+/* submit button */
+#submit-button
+{
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+
+
+/* this is the correct/incorrect box, used to indicate to the player if they 
+were correct or incorrect in their guess */
 .box{
   position: relative;
   justify-content: center;
@@ -200,110 +338,12 @@ li
   text-align: center;
 }
 
-span
-{
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 10vh;
-}
-
-.list-container
-{  
-  scroll-snap-align: center;
-  width: 90%;
-  height: 45vh;
-
-}
-
-.result-box ul
-{
-  border-top: 1px;
-  padding: 1vh 1vw;
-}
-
-.result-box ul li
-{
-  list-style:none;
-  border-radius: 3px;
-  padding: 1vh 1vw;
-  cursor: pointer;
-}
-
-.result-box ul li:hover
-{
-  background:#e9f3ff;
-}
-
-.result-box{
-  max-height: 25vh;
-  overflow-y: scroll;
-
-}
-
-img
-{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:100%;
-}
-
-.todo-list
-{
-  margin: 0px;
-  padding: 0px;
-  background-color: rgb(122, 122, 122);
-}
-
-#LRbutton
-{
-  cursor: pointer;
-  background: #fff;
-  border: 0;
-  outline: none;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 30px;
-}
-
-#submit-button
-{
-  cursor: pointer;
-  background: #fff;
-  border: 0;
-  outline: none;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 30px;
-}
-
-#aircraft-list
-{
-  position: relative;
-  vertical-align: auto;
-  display: none;
-  border: 5px solid;
-  border-color:rgb(20, 112, 155);
-  transform: rotateY(180deg);
-  cursor: pointer;
-}
-
-#aircraft-list li:hover
-{
-  background:#646464;
-}
-
-#toggle
-{
-  color:rgb(0, 0, 0);
-  
-}
 
 #health
 {
   width: 60%;
   display: inline-flex;
-  border: 5px solid;
-  border-color:rgb(207, 48, 154);
   position: relative;
+
+  border: rgb(207, 48, 154) /*5px solid*/;
 }

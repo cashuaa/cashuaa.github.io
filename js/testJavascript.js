@@ -96,7 +96,7 @@ function selectInput(list)
 
 submitButton.onclick = function()
 {
-    if (health <= 5)
+    if (health < 5)
     {
         console.log(inputBox.value);
         console.log(whichPictures[slideIndex-1].id);
