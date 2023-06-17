@@ -119,6 +119,7 @@ li
   left:0px;
   position: absolute;
   background-color:#333;
+  cursor: pointer;
 }
 
 .navbar a
@@ -284,6 +285,12 @@ img
   border: 5px solid;
   border-color:rgb(20, 112, 155);
   transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+#aircraft-list li:hover
+{
+  background:#646464;
 }
 
 #toggle
