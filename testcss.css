@@ -161,11 +161,6 @@ to define all possible aircraft, and used for clickable answers */
   color: dimgrey;
 }
 
-/* Button used to switch between the guess box and the clickable list  */ 
-#toggle
-{
-  color:rgb(0, 0, 0);
-}
 
 /* This encompasses everything except the health bar on the bottom, and 
 the correct/incorrect box. The mainGame and the flip-card are included in this
