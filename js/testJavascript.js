@@ -42,7 +42,7 @@ function showDivs(n)
 
     whichPictures[slideIndex-1].style.display = "block";
 
-    console.log(whichPictures[slideIndex-1].id);
+    //console.log(whichPictures[slideIndex-1].id);
 }
 
 
@@ -112,7 +112,7 @@ submitButton.onclick = function()
             document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
             document.getElementById("box").textContent = "incorrect";
             health += 1 ;
-            console.log(health);
+            //console.log(health);
             document.getElementById("heart-"+health).src = "https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/heart_empty.png";
         }
     }
@@ -185,8 +185,8 @@ function clickToGuess(id)
 {
     if (health <= 5)
     {
-        console.log(inputBox.value);
-        console.log(whichPictures[slideIndex-1].id);
+        //console.log(inputBox.value);
+        //console.log(whichPictures[slideIndex-1].id);
         if (id.toLowerCase() == whichPictures[slideIndex-1].id.toLowerCase())
         {
             document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
