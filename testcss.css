@@ -88,7 +88,13 @@ li
   -moz-columns: 2;
   display:block;
   overflow-x: scroll;
-  max-height: 35vh;
+  max-height: 80%;
+}
+
+#aircraft-line-list a
+{
+  padding: 0px;
+  margin: 0px;
 }
 
 #aircraft-real-list
@@ -98,7 +104,13 @@ li
   -moz-columns: 2;
   display:none;
   overflow-x: scroll;
-  max-height: 35vh;
+  max-height: 80%;
+}
+
+#aircraft-real-list a
+{
+  padding: 0px;
+  margin: 0px;
 }
 
 .navbar 
@@ -131,6 +143,7 @@ li
   border: 5px solid;
   border-color:darkorange;
   height: 65vh;
+  width: 60vw;
 
 }
 
@@ -142,38 +155,44 @@ li
   border-color:yellow;
   width: 50%;
 
+
 }
 
-
-.guess-and-results
+#flip-card
 {
   position: relative;
+  vertical-align: top;
   float: left;
-  vertical-align: auto;
   width: 50%;
   border: 5px solid;
+  border-color:rgb(51, 197, 64);
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style:preserve-3d;
+}
+
+#aircraft-guess
+{
+
+  border: 5px solid;
   border-color:red;
-  
 }
 
 .search-box
 {
   position: relative;
-  vertical-align: top;
+  width: 90%;
 
-  width: 100%;
-  height: 45vh;
-  border: 5px solid;
-  border-color:green;
-
+  
 }
 
 .box{
+  position: relative;
   justify-content: center;
-  width: 100%;
+  width: 60%;
   height: 50px;
   border: 1px solid black;
-
+  display: inline-flex;
   background-color:rgb(68, 68, 68);
   font-size: 30px;
   color: white;
@@ -190,11 +209,9 @@ span
 .list-container
 {  
   scroll-snap-align: center;
-  width: 100%;
+  width: 90%;
   height: 45vh;
 
-  border: 5px solid;
-  border-color:rebeccapurple;
 }
 
 .result-box ul
@@ -263,10 +280,10 @@ img
 {
   position: relative;
   vertical-align: auto;
-  width: 50%;
   display: none;
   border: 5px solid;
   border-color:rgb(20, 112, 155);
+  transform: rotateY(180deg);
 }
 
 #toggle
@@ -277,7 +294,7 @@ img
 
 #health
 {
-  width: 50vw;
+  width: 60%;
   display: inline-flex;
   border: 5px solid;
   border-color:rgb(207, 48, 154);

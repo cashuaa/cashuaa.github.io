@@ -13,6 +13,7 @@ let lineAircraftKeywords = [
     'EF-111A Raven',
     'F-16 Fighting Falcon',
     'A-6 Intruder',
+    'EA-6 Prowler',
     'F-111B',
     'E-2C Hawkeye',
     'C-130 Hercules',

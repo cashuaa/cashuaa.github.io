@@ -104,7 +104,8 @@ submitButton.onclick = function()
         {
             document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
             document.getElementById("box").textContent = "correct";
-
+            slideIndex = Math.floor(Math.random() * whichPictures.length);
+            showDivs(slideIndex);
         }
         else 
         {
@@ -117,7 +118,7 @@ submitButton.onclick = function()
     }
     else
     {
-        document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
+        document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
         document.getElementById("box").textContent = "out of lives";
     }
 }
@@ -127,7 +128,7 @@ lineDrawings.onclick = function()
     if (whichPictures != aircraftLine)
     {
         whichPictures = aircraftLine;
-        for( index = 0; index < aircraftLine.length; index++ )
+        for( index = 0; index < aircraftReal.length; index++ )
         {
             aircraftReal[index].style.display = "none";
         }
@@ -135,6 +136,7 @@ lineDrawings.onclick = function()
 
         aircraftLineList.style.display = "block";
         aircraftRealList.style.display = "none";
+        showDivs(slideIndex);
     }
 }
 
@@ -151,6 +153,7 @@ pictures.onclick = function()
 
         aircraftLineList.style.display = "none";
         aircraftRealList.style.display = "block";
+        showDivs(slideIndex);
     }
 
 }
@@ -163,13 +166,47 @@ function toggleDiv(divid)
  
     if(document.getElementById(varon).style.display == 'block')
     {
-    document.getElementById(varon).style.display = 'none';
-    document.getElementById(varoff).style.display = 'block';
+        document.getElementById(varoff).style.transition= 'transform 1s';
+        document.getElementById(varon).style.display = 'none';
+        document.getElementById(varoff).style.display = 'block';
+        document.getElementById('flip-card').style.transform = "rotateY(" + 0 + "deg)";
+        document.getElementById('flip-card').style.transition= 'transform 1s';
     }
    
     else
     {  
-    document.getElementById(varoff).style.display = 'none';
-    document.getElementById(varon).style.display = 'block'
+        document.getElementById(varon).style.transition= 'transform 1s';
+        document.getElementById(varoff).style.display = 'none';
+        document.getElementById(varon).style.display = 'block';
+        document.getElementById('flip-card').style.transform = "rotateY(" + 180 + "deg)";
+        document.getElementById('flip-card').style.transition= 'transform 1s';
     }
 } 
+
+function clickToGuess(id)
+{
+    if (health <= 5)
+    {
+        console.log(inputBox.value);
+        console.log(whichPictures[slideIndex-1].id);
+        if (id.toLowerCase() == whichPictures[slideIndex-1].id.toLowerCase())
+        {
+            document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
+            document.getElementById("box").textContent = "correct";
+            slideIndex = Math.floor(Math.random() * whichPictures.length);
+            showDivs(slideIndex);
+        }
+        else 
+        {
+            document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
+            document.getElementById("box").textContent = "incorrect";
+            health += 1 ;
+            document.getElementById("heart-"+health).src = "https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/heart_empty.png";
+        }
+    }
+    else
+    {
+        document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
+        document.getElementById("box").textContent = "out of lives";
+    }
+}
