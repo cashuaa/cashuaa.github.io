@@ -11,6 +11,7 @@ var aircraftLine = document.getElementsByClassName("aircraftLineDrawings");
 var aircraftReal = document.getElementsByClassName("aircraftRealDrawings");
 var whichPictures = aircraftLine;
 
+var health = 0;
 
 
 var slideIndex = 1; 
@@ -95,22 +96,31 @@ function selectInput(list)
 
 submitButton.onclick = function()
 {
-    console.log(inputBox.value);
-    console.log(whichPictures[slideIndex-1].id);
-    if (inputBox.value.toLowerCase() == whichPictures[slideIndex-1].id.toLowerCase())
+    if (health <= 5)
     {
-        document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
-        document.getElementById("box").textContent = "correct";
+        console.log(inputBox.value);
+        console.log(whichPictures[slideIndex-1].id);
+        if (inputBox.value.toLowerCase() == whichPictures[slideIndex-1].id.toLowerCase())
+        {
+            document.getElementById("box").style.backgroundColor = "rgb(63, 116, 63)";
+            document.getElementById("box").textContent = "correct";
 
+        }
+        else 
+        {
+            document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
+            document.getElementById("box").textContent = "incorrect";
+            health += 1 ;
+            console.log(health);
+            document.getElementById("heart-"+health).src = "https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/heart_empty.png";
+        }
     }
-    else 
+    else
     {
         document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
-        document.getElementById("box").textContent = "incorrect";
+        document.getElementById("box").textContent = "out of lives";
     }
-
 }
-
 
 lineDrawings.onclick = function()
 {
@@ -144,7 +154,6 @@ pictures.onclick = function()
     }
 
 }
-
 
 function toggleDiv(divid)
   {

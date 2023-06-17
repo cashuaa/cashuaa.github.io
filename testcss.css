@@ -266,3 +266,12 @@ img
   color:rgb(0, 0, 0);
   
 }
+
+#health
+{
+  width: 50vw;
+  display: inline-flex;
+  border: 5px solid;
+  border-color:rgb(207, 48, 154);
+  position: relative;
+}
