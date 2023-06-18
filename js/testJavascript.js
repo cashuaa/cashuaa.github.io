@@ -120,14 +120,14 @@ submitButton.onclick = function()
             if (health == 0)
             {
                 document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
-                document.getElementById("box").textContent = "out of lives";
+                document.getElementById("box").textContent = "out of guesses";
             }
         }
     }
     else
     {
         document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
-        document.getElementById("box").textContent = "out of lives";
+        document.getElementById("box").textContent = "out of guesses";
     }
 }
 
@@ -215,13 +215,13 @@ function clickToGuess(id)
             if (health == 0)
             {
                 document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
-                document.getElementById("box").textContent = "out of lives";
+                document.getElementById("box").textContent = "out of guesses";
             }
         }
     }
     else
     {
         document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
-        document.getElementById("box").textContent = "out of lives";
+        document.getElementById("box").textContent = "out of guesses";
     }
 }
