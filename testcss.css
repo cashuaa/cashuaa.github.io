@@ -181,8 +181,7 @@ and includes the next and previous buttons. */
 {
   position: relative;
   float: left;
-  width: 50%;
- 
+  width: 50%; 
   border:yellow /*5px solid*/;
 }
 
