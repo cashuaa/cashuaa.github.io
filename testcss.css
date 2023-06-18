@@ -327,8 +327,6 @@ on the guess input side of the functionality behaves and looks*/
   border-radius: 30px;
 }
 
-
-
 #health
 {
   width: 60%;
@@ -337,3 +335,92 @@ on the guess input side of the functionality behaves and looks*/
 
   border: rgb(207, 48, 154) /*5px solid*/;
 }
+
+#heart-card
+{
+  display: inline-flex;
+}
+
+#heart-1-card
+{
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style:preserve-3d;
+}
+
+#heart-1-card-full
+{ 
+  display:block;
+}
+#heart-1-card-empty
+{
+  display:none;
+}
+
+
+#heart-2-card
+{
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style:preserve-3d;
+}
+
+#heart-2-card-full
+{ 
+  display:block;
+}
+#heart-2-card-empty
+{
+  display:none;
+}
+
+
+#heart-3-card
+{
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style:preserve-3d;
+}
+
+#heart-3-card-full
+{ 
+  display:block;
+}
+#heart-3-card-empty
+{
+  display:none;
+}
+
+
+#heart-4-card
+{
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style:preserve-3d;
+}
+
+#heart-4-card-full
+{ 
+  display:block;
+}
+#heart-4-card-empty
+{
+  display:none;
+}
+
+#heart-5-card
+{
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style:preserve-3d;
+}
+
+#heart-5-card-full
+{ 
+  display:block;
+}
+#heart-5-card-empty
+{
+  display:none;
+}
+

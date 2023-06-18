@@ -11,7 +11,7 @@ var aircraftLine = document.getElementsByClassName("aircraftLineDrawings");
 var aircraftReal = document.getElementsByClassName("aircraftRealDrawings");
 var whichPictures = aircraftLine;
 
-var health = 0;
+var health = 5;
 
 
 var slideIndex = 1; 
@@ -96,7 +96,7 @@ function selectInput(list)
 
 submitButton.onclick = function()
 {
-    if (health < 5)
+    if (health > 0)
     {
         console.log(inputBox.value);
         console.log(whichPictures[slideIndex-1].id);
@@ -109,11 +109,19 @@ submitButton.onclick = function()
         }
         else 
         {
+            document.getElementById("heart-"+health+"-card").style.transition= 'transform 1s';
+            document.getElementById('heart-'+health+'-card').style.transform = "rotateY(" + 180 + "deg)";
+            document.getElementById('heart-'+health+'-card-full').style.display ='none'
+            document.getElementById('heart-'+health+'-card-empty').style.display ='block'
+
             document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
             document.getElementById("box").textContent = "incorrect";
-            health += 1 ;
-            //console.log(health);
-            document.getElementById("heart-"+health).src = "https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/heart_empty.png";
+            health -= 1 ;
+            if (health == 0)
+            {
+                document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
+                document.getElementById("box").textContent = "out of lives";
+            }
         }
     }
     else
@@ -183,7 +191,7 @@ function toggleDiv(divid)
 
 function clickToGuess(id)
 {
-    if (health <= 5)
+    if (health > 0)
     {
         //console.log(inputBox.value);
         //console.log(whichPictures[slideIndex-1].id);
@@ -196,10 +204,19 @@ function clickToGuess(id)
         }
         else 
         {
+            document.getElementById("heart-"+health+"-card").style.transition= 'transform 1s';
+            document.getElementById('heart-'+health+'-card').style.transform = "rotateY(" + 180 + "deg)";
+            document.getElementById('heart-'+health+'-card-full').style.display ='none'
+            document.getElementById('heart-'+health+'-card-empty').style.display ='block'
+
             document.getElementById("box").style.backgroundColor = "rgb(107, 12, 0)";
             document.getElementById("box").textContent = "incorrect";
-            health += 1 ;
-            document.getElementById("heart-"+health).src = "https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/heart_empty.png";
+            health -= 1 ;
+            if (health == 0)
+            {
+                document.getElementById("box").style.backgroundColor = "rgb(122, 122, 122)";
+                document.getElementById("box").textContent = "out of lives";
+            }
         }
     }
     else
