@@ -201,11 +201,22 @@ img
 {
   cursor: pointer;
   background: #fff;
-  border: 0;
   outline: none;
   font-size: 12px;
   font-weight: 500;
   border-radius: 30px;
+}
+
+
+/* this is the correct/incorrect box, used to indicate to the player if they 
+were correct or incorrect in their guess */
+.box{
+  justify-content: center;
+  height: 50px;
+  border: 1px solid black;
+  background-color:rgb(68, 68, 68);
+  font-size: 30px;
+  color: white;
 }
 
 
@@ -316,22 +327,6 @@ on the guess input side of the functionality behaves and looks*/
   border-radius: 30px;
 }
 
-
-
-/* this is the correct/incorrect box, used to indicate to the player if they 
-were correct or incorrect in their guess */
-.box{
-  position: relative;
-  justify-content: center;
-  width: 60%;
-  height: 50px;
-  border: 1px solid black;
-  display: inline-flex;
-  background-color:rgb(68, 68, 68);
-  font-size: 30px;
-  color: white;
-  text-align: center;
-}
 
 
 #health
