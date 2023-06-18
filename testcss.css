@@ -10,7 +10,7 @@ html
 body 
 {
   font-family: 'Baloo Bhai 2', cursive;
-  background: #c4c4c4;
+  background: rgb(196, 196, 196);
   font-size: 100%;
   background-image: url("https://raw.githubusercontent.com/cashuaa/cashuaa.github.io/main/ccsPictures/background.png");
 }
@@ -128,14 +128,14 @@ to define all possible aircraft, and used for clickable answers */
   top:0px;
   left:0px;
   position: absolute;
-  background-color:#333;
+  background-color:rgb(51, 51, 51);
 }
 
 /* Attributes used for the a tag items in the navbar  */ 
 .navbar a
 {
   float:left;
-  color: #f2f2f2;
+  color: rgb(242, 242, 242);
   text-align: center;
   text-decoration:none;
   font-size:17px;
@@ -144,7 +144,7 @@ to define all possible aircraft, and used for clickable answers */
 /* Hover over the buttons attributes  */ 
 .navbar a:hover 
 {
-  background: #ddd;
+  background: rgb(221, 221, 221);
   color:black;
 }
 
@@ -156,7 +156,7 @@ to define all possible aircraft, and used for clickable answers */
 /* Button used to switch to Naval OB  */ 
 #naval, #ground
 {
-  color: dimgrey;
+  color: rgb(105, 105, 105);
   cursor: not-allowed;
 }
 
@@ -198,7 +198,7 @@ img
 #LRbutton
 {
   cursor: pointer;
-  background: #fff;
+  background: rgb(255, 255, 255);
   outline: none;
   font-size: 12px;
   font-weight: 500;
@@ -260,7 +260,7 @@ list of aircraft side of the flip-card. */
 
 #aircraft-list li:hover
 {
-  background:#646464;
+  background:rgb(100, 100, 100);
 }
 
 
@@ -324,14 +324,14 @@ on the guess input side of the functionality behaves and looks*/
 /* hover over each element of the result box */
 .result-box ul li:hover
 {
-  background:#e9f3ff;
+  background:rgb(233, 243, 255);
 }
 
 /* submit button */
 #submit-button
 {
   cursor: pointer;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border: 0;
   outline: none;
   font-size: 12px;
