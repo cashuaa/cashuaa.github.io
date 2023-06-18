@@ -129,7 +129,6 @@ to define all possible aircraft, and used for clickable answers */
   left:0px;
   position: absolute;
   background-color:#333;
-  cursor: pointer;
 }
 
 /* Attributes used for the a tag items in the navbar  */ 
@@ -149,16 +148,16 @@ to define all possible aircraft, and used for clickable answers */
   color:black;
 }
 
-/* Button used to switch to Naval OB  */ 
-#naval
+#pictures, #line-drawings, #toggle
 {
-  color: dimgrey;
+  cursor: pointer;
 }
 
-/* Button used to switch to Ground OB  */ 
-#ground
+/* Button used to switch to Naval OB  */ 
+#naval, #ground
 {
   color: dimgrey;
+  cursor: not-allowed;
 }
 
 
@@ -340,86 +339,18 @@ on the guess input side of the functionality behaves and looks*/
   display: inline-flex;
 }
 
-#heart-1-card
+#heart-1-card, #heart-2-card, #heart-3-card, #heart-4-card, #heart-5-card
 {
   transform: rotateY(0deg);
   transition: transform 1s;
   transform-style:preserve-3d;
 }
 
-#heart-1-card-full
+#heart-1-card-full, #heart-2-card-full, #heart-3-card-full, #heart-4-card-full, #heart-5-card-full
 { 
   display:block;
 }
-#heart-1-card-empty
+#heart-1-card-empty, #heart-2-card-empty, #heart-3-card-empty, #heart-4-card-empty, #heart-5-card-empty
 {
   display:none;
 }
-
-
-#heart-2-card
-{
-  transform: rotateY(0deg);
-  transition: transform 1s;
-  transform-style:preserve-3d;
-}
-
-#heart-2-card-full
-{ 
-  display:block;
-}
-#heart-2-card-empty
-{
-  display:none;
-}
-
-
-#heart-3-card
-{
-  transform: rotateY(0deg);
-  transition: transform 1s;
-  transform-style:preserve-3d;
-}
-
-#heart-3-card-full
-{ 
-  display:block;
-}
-#heart-3-card-empty
-{
-  display:none;
-}
-
-
-#heart-4-card
-{
-  transform: rotateY(0deg);
-  transition: transform 1s;
-  transform-style:preserve-3d;
-}
-
-#heart-4-card-full
-{ 
-  display:block;
-}
-#heart-4-card-empty
-{
-  display:none;
-}
-
-#heart-5-card
-{
-  transform: rotateY(0deg);
-  transition: transform 1s;
-  transform-style:preserve-3d;
-}
-
-#heart-5-card-full
-{ 
-  display:block;
-}
-#heart-5-card-empty
-{
-  display:none;
-}
-
